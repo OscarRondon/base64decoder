@@ -20,16 +20,14 @@ const App = (): JSX.Element => {
           <header>
             <label>Input</label>
           </header>
-          <input type='text' id='txt_inputData' placeholder='Write a text' />
+          <textarea id='txt_inputData' placeholder='Write a text' />
         </div>
-        <div>
-          <button>Encode</button>
-        </div>
+        <button>Encode</button>
         <div className='input-container'>
           <header>
             <label>Output</label>
           </header>
-          <input type='text' id='txt_outputData' placeholder='Result text' />
+          <textarea id='txt_outputData' placeholder='Result text' />
         </div>
       </section>
       <div />
