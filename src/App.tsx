@@ -18,7 +18,7 @@ const App = (): JSX.Element => {
       <section className='inputs'>
         <div className='input-container'>
           <header>
-            <label>Input:</label>
+            <label>Input</label>
           </header>
           <input type='text' id='txt_inputData' placeholder='Write a text' />
         </div>
@@ -27,7 +27,7 @@ const App = (): JSX.Element => {
         </div>
         <div className='input-container'>
           <header>
-            <label>Output:</label>
+            <label>Output</label>
           </header>
           <input type='text' id='txt_outputData' placeholder='Result text' />
         </div>

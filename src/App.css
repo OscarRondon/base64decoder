@@ -13,7 +13,7 @@
     margin-bottom: 50px;
     padding: 5px;
     text-align: center;
-    width: 80%;
+    width: 50%;
 }
 
 .options {
@@ -22,9 +22,9 @@
     gap: 15px;
     margin-bottom: 10px;
     border: solid 1px white;
-    padding: 5px;
+    padding: 5px 15px;
     border-radius: 5px;
-
+    box-shadow: 2px 2px 5px 0px rgba(245, 245, 248, 0.3);
 }
 
 .option-check {
@@ -32,4 +32,32 @@
     flex-direction: row;
     gap: 5px;
     accent-color: blue;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border: solid 1px white;
+    padding: 40px 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 0px rgba(245, 245, 248, 0.3);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: solid 1px white;
+    border-radius: 15px;
+    height: 150px;
+    padding: 0px;
+}
+
+.input-container>header {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    border-bottom: solid 1px white;
+    padding: 5px;
 }
