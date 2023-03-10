@@ -64,19 +64,46 @@
 .input-container>textarea {
     resize: none;
     height: 120px;
+    padding: 5px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    outline: none;
 }
 
 .inputs>button {
+    font-family: OpenSans-Regular;
     border: none;
-    border-radius: 20px;
-    width: 150px;
-    box-shadow: black 5px 3px;
+    border-radius: 5px;
+    width: 100px;
+    border: solid 1px #7D8597;
+    background-color: #7D8597;
 }
 
-@media screen and (max-width: 1024px) {
+.inputs>button:hover {
+    background-color: #5C677D;
+}
+
+.inputs>button:active {
+    border: solid 1px white;
+}
+
+@media screen and (max-width: 1367px) {
     .title {
         width: 90%;
+    }
+}
+
+@media screen and (max-height: 376px) {
+    .main {
+        display: block;
+        overflow: scroll;
+        width: 90%;
+        height: 90%;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .inputs {
+        margin-bottom: 20px;
     }
 }

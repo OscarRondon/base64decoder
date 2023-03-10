@@ -22,7 +22,7 @@ const App = (): JSX.Element => {
           </header>
           <textarea id='txt_inputData' placeholder='Write a text' />
         </div>
-        <button>Encode</button>
+        <button type='button'>Encode</button>
         <div className='input-container'>
           <header>
             <label>Output</label>

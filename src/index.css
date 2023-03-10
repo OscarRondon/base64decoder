@@ -84,3 +84,9 @@ h6 {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 1367px) {
+  #root {
+    width: 100%;
+  }
+}
