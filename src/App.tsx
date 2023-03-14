@@ -26,6 +26,10 @@ const App = (): JSX.Element => {
         <div className='input-container'>
           <header>
             <label>Output</label>
+            <button id='copyToClipbooard' title='Copy to Clipboard' className='button-copy'>
+              <img title='Copy' src='../src/assets/icons/copy-to-clipboard.svg' className='display-none'/>
+              <img title='Check' src='../src/assets/icons/double-tick-icon.svg' className='display-none'/>
+            </button>
           </header>
           <textarea id='txt_outputData' placeholder='Result text' />
         </div>

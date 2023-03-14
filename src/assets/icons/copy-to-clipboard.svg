@@ -1,6 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clipboard-copy" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h3m9 -9v-5a2 2 0 0 0 -2 -2h-2"></path>
-   <path d="M13 17v-1a1 1 0 0 1 1 -1h1m3 0h1a1 1 0 0 1 1 1v1m0 3v1a1 1 0 0 1 -1 1h-1m-3 0h-1a1 1 0 0 1 -1 -1v-1"></path>
-   <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M152 32C138.745 32 128 42.7452 128 56V128L56 128C42.7452 128 32 138.745 32 152L32 456C32 469.255 42.7451 480 56 480L360 480C373.255 480 384 469.255 384 456V384H456C469.255 384 480 373.255 480 360L480 56C480 42.7452 469.255 32 456 32L152 32ZM384 352L384 152C384 138.745 373.255 128 360 128L160 128V64L448 64L448 352H384ZM64 448L64 160L352 160L352 448L64 448Z" fill="white" id="id_102"></path>
 </svg>
