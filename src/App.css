@@ -90,15 +90,22 @@
 
 .button-copy {
     all: unset;
+    display: flex;
     cursor: pointer;
     width: 25px;
     height: 25px;
     border-radius: 50%;
 }
 
+.button-copy:hover {
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
 .button-copy>img {
     width: 15px;
     height: 15px;
+    margin: auto;
+    ;
 }
 
 .display-none {
@@ -111,12 +118,11 @@
     }
 }
 
-@media screen and (max-height: 376px) {
+@media screen and (max-height: 655px) {
     .main {
         display: block;
         overflow: scroll;
         width: 90%;
-        height: 90%;
         margin: auto;
         padding: 10px;
     }
