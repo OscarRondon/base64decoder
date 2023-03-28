@@ -15,16 +15,34 @@ const App = (): JSX.Element => {
     const newTextData = (document.getElementById('txtInputData') as HTMLTextAreaElement).value
     if (newTextData !== '') {
       setTextData(newTextData)
+    } else {
+      setTextData('')
     }
   }
 
+  const handleBtnclearClick = (): void => {
+    const $txtInputData = (document.getElementById('txtInputData') as HTMLTextAreaElement)
+    const $txtOutputData = (document.getElementById('txtOutputData') as HTMLTextAreaElement)
+    $txtInputData.value = ''
+    $txtOutputData.value = ''
+    setTextData('')
+  }
+
   const handleBtnCopyToClipboardClick = (): void => {
-    const textData = (document.getElementById('txtInputData') as HTMLTextAreaElement).value
-    if (textData !== '') {
-      navigator.clipboard.writeText(textData)
-        .then(res => { console.log('copiado') })
-        .catch(err => { console.log(err) })
-    }
+    const textData = (document.getElementById('txtOutputData') as HTMLTextAreaElement).value
+
+    navigator.clipboard.writeText(textData)
+      .then(res => {
+        const $copyIcon = document.getElementById('copyIcon')
+        const $checkIcon = document.getElementById('checkIcon')
+        $copyIcon?.classList.add('display-none')
+        $checkIcon?.classList.remove('display-none')
+        setTimeout(() => {
+          $copyIcon?.classList.remove('display-none')
+          $checkIcon?.classList.add('display-none')
+        }, 1500)
+      })
+      .catch(err => { console.log(err) })
   }
 
   return (
@@ -51,13 +69,16 @@ const App = (): JSX.Element => {
           </header>
           <textarea id='txtInputData' placeholder='Write a text'/>
         </div>
+        <div className='mainButtons'>
         <button type='button' id='btnEcodeDecode' onClick={() => { handleBtnEncodeDecodeClick() }}>{typeOfAction}</button>
+        <button type='button' id='btnClear' onClick={() => { handleBtnclearClick() }}>Clear</button>
+        </div>
         <div className='input-container'>
           <header>
             <label>Output</label>
             <button id='copyToClipbooard' title='Copy to Clipboard' className='button-copy' onClick={() => { handleBtnCopyToClipboardClick() }}>
-              <img id='copy' title='Copy' src='../src/assets/icons/copy-to-clipboard.svg'/>
-              <img id='check' title='Check' src='../src/assets/icons/double-tick-icon.svg' className='display-none'/>
+              <img id='copyIcon' title='Copy' src='../src/assets/icons/copy-to-clipboard.svg'/>
+              <img id='checkIcon' title='Copied' src='../src/assets/icons/double-tick-icon.svg' className='display-none'/>
             </button>
           </header>
           <textarea id='txtOutputData' placeholder='Result text' value={textData} readOnly />

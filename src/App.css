@@ -71,7 +71,13 @@
     outline: none;
 }
 
-.inputs>button {
+.mainButtons {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}
+
+.mainButtons>button {
     font-family: OpenSans-Regular;
     border: none;
     border-radius: 5px;
@@ -80,11 +86,11 @@
     background-color: #7D8597;
 }
 
-.inputs>button:hover {
+.mainButtons>button:hover {
     background-color: #5C677D;
 }
 
-.inputs>button:active {
+.mainButtons>button:active {
     border: solid 1px white;
 }
 
