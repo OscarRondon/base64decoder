@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import { B64ToUtf8, Utf8toB64 } from './logic/encodingB64'
 
 type Action = 'Encode' | 'Decode'
 
@@ -12,8 +13,13 @@ const App = (): JSX.Element => {
   }
 
   const handleBtnEncodeDecodeClick = (): void => {
-    const newTextData = (document.getElementById('txtInputData') as HTMLTextAreaElement).value
+    let newTextData = (document.getElementById('txtInputData') as HTMLTextAreaElement).value
     if (newTextData !== '') {
+      if (typeOfAction === 'Encode') {
+        newTextData = Utf8toB64(newTextData)
+      } else {
+        newTextData = B64ToUtf8(newTextData)
+      }
       setTextData(newTextData)
     } else {
       setTextData('')
