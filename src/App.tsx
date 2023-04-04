@@ -1,12 +1,15 @@
-import { useState } from 'react'
 import './App.css'
 import { B64ToUtf8, Utf8toB64 } from './logic/encodingB64'
-
-type Action = 'Encode' | 'Decode'
+import { type Action } from './model/types.d'
+import { useReducerApp } from './hooks/useReducerApp'
 
 const App = (): JSX.Element => {
-  const [typeOfAction, setTypeOfAction] = useState<Action>('Encode')
-  const [textData, setTextData] = useState('')
+  const {
+    typeOfAction,
+    textData,
+    setTypeOfAction,
+    setTextData
+  } = useReducerApp()
 
   const handleRadioButtonOnChange = (action: Action): void => {
     setTypeOfAction(action)
